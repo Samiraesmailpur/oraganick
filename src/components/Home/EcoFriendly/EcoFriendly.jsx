@@ -1,4 +1,3 @@
-import Container from "@components/Container/Container";
 import "./EcoFriendly.scss";
 import EcoFriendlyImage from "./EcoFriendlyImage";
 import EcoFriendlyContentBlock from "./EcoFriendlyContentBlock";
