@@ -1,12 +1,10 @@
-import Container from "@components/Container/Container";
+import NotFound from "@components/NotFound/NotFound";
 
 const NotFoundPage = () => {
   return (
-    <section>
-      <Container>
-        <p>404</p>
-      </Container>
-    </section>
+    <>
+      <NotFound />
+    </>
   );
 };
 

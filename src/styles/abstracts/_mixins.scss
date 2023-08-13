@@ -30,7 +30,7 @@
 }
 
 @mixin button {
-  width: 220px;
+  max-width: 220px;
   padding: 28px 39px;
   display: flex;
   justify-content: center;

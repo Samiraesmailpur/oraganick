@@ -1,10 +1,25 @@
 import "./News.scss";
-import NewsPost from "./NewsPost";
 import Container from "@components/Container/Container";
-import NewsSubscribe from "./NewsSubscribe";
+import Post from "../../Post/Post";
+import Subscribe from "../../Subscribe/Subscribe";
 import { ReactComponent as Arrow } from "@assets/svg/arrow.svg";
+import tomatoes from "@assets/images/tomatoes.png";
+import salad from "@assets/images/salad.png";
 
 const News = () => {
+  const postsData = [
+    {
+      id: 1,
+      image: tomatoes,
+      title: "The Benefits of Vitamin D & How to Get It",
+    },
+    {
+      id: 2,
+      image: salad,
+      title: "Our Favourite Summertime Tomatoes",
+    },
+  ];
+
   return (
     <section className="news">
       <Container>
@@ -20,8 +35,12 @@ const News = () => {
             <Arrow className="news__arrow" />
           </button>
         </div>
-        <NewsPost />
-        <NewsSubscribe />
+        <div className="blog">
+          {postsData.map((post) => (
+            <Post key={post.id} postsData={post} />
+          ))}
+        </div>
+        <Subscribe />
       </Container>
     </section>
   );
