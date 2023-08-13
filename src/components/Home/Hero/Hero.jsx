@@ -10,7 +10,7 @@ const Hero = () => {
           <p className="hero__pre-title">100% Natural Food</p>
           <h1 className="hero__title">Choose the best healthier way of life</h1>
           <button className="hero__btn" type="button">
-            Explore Now <Arrow />
+            Explore Now <Arrow className="hero__arrow" />
           </button>
         </div>
       </Container>

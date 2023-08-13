@@ -21,3 +21,21 @@
     @content;
   }
 }
+
+@mixin icon {
+  width: 19px;
+  height: 19px;
+  background: #335b6b;
+  border-radius: 50%;
+}
+
+@mixin button {
+  width: 220px;
+  padding: 28px 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 16px;
+}

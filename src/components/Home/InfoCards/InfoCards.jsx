@@ -1,4 +1,4 @@
-import infoCardFruits from "@assets/images/infoCardFruits.png";
+import infoCardFruits from "@assets/images/infoCardFruits.jpg";
 import infoCardVegatables from "@assets/images/infoCardVegatables.jpg";
 import Container from "@components/Container/Container";
 import "./InfoCards.scss";

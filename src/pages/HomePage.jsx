@@ -1,4 +1,3 @@
-import Container from "@components/Container/Container";
 import Hero from "@components/Home/Hero/Hero";
 import InfoCards from "@components/Home/InfoCards/InfoCards";
 import About from "@components/Home/About/About";
@@ -6,9 +5,8 @@ import Categories from "@components/Home/Categories/Categories";
 import Testimonial from "@components/Home/Testimonial/Testimonial";
 import Offer from "@components/Home/Offer/Offer";
 import EcoFriendly from "@components/Home/EcoFriendly/EcoFriendly";
-import Cards from "@components/Home/Cards/Cards";
+import Gallery from "@components/Home/Gallery/Gallery";
 import News from "@components/Home/News/News";
-import Subscribe from "@components/Subscribe/Subscribe";
 
 const HomePage = () => {
   return (
@@ -20,9 +18,8 @@ const HomePage = () => {
       <Testimonial />
       <Offer />
       <EcoFriendly />
-      <Cards />
+      <Gallery />
       <News />
-      <Subscribe />
     </>
   );
 };

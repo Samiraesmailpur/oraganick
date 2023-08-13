@@ -1,40 +1,18 @@
-import { ReactComponent as Stars } from "@assets/svg/starsTestimonial.svg";
+import "./Testimonial.scss";
+import Container from "@components/Container/Container";
+import TestimonialSwiper from "./TestimonialSwiper";
+import Achievement from "./Achievement";
 
 const Testimonial = () => {
   return (
-    <div>
-      <p>Testimonial</p>
-      <h3>What Our Customer Saying?</h3>
-      <Stars />
-      <p>
-        Simply dummy text of the printing and typesetting industry. Lorem Ipsum
-        simply dummy text of the printing and typesetting industry. Lorem Ipsum
-        has been.
-      </p>
-      <p>Sara Taylor</p>
-      <p>Consumer</p>
-      <button></button>
-      <button></button>
-      <button></button>
-      <div>
-        <div>
-          <p>100%</p>
-          <p>Organic</p>
-        </div>
-        <div>
-          <p>285</p>
-          <p>Active Product</p>
-        </div>
-        <div>
-          <p>350+</p>
-          <p>Organic Orchads</p>
-        </div>
-        <div>
-          <p>25+</p>
-          <p>Years of Farming</p>
-        </div>
-      </div>
-    </div>
+    <section className="testimonial">
+      <Container>
+        <p className="testimonial__pre-title">Testimonial</p>
+        <h3 className="testimonial__title">What Our Customer Saying?</h3>
+        <TestimonialSwiper />
+        <Achievement />
+      </Container>
+    </section>
   );
 };
 

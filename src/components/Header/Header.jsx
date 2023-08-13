@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import Container from "@components/Container/Container";
 import "./Header.scss";
-import { ReactComponent as Logo } from "@assets/svg/logo.svg";
+import Container from "@components/Container/Container";
+import Logo from "../Logo/Logo";
 import { ReactComponent as Cart } from "@assets/svg/cart.svg";
 import { ReactComponent as Search } from "@assets/svg/search.svg";
 import { ReactComponent as Arrow } from "@assets/svg/headerArrow.svg";
@@ -11,10 +11,7 @@ const Header = () => {
     <header className="header">
       <Container>
         <nav className="nav">
-          <a className="nav__logo-link" href="/">
-            <Logo className="nav__logo-icon" />
-            <span className="nav__logo-name">Organick</span>
-          </a>
+          <Logo />
           <ul className="nav__list">
             <li className="nav__item">
               <NavLink className="nav__link" to="/">
@@ -49,12 +46,12 @@ const Header = () => {
             </li>
           </ul>
           <div className="nav__box">
-            <form className="nav__form">
+            <div className="nav__field">
               <input type="text" className="nav__input" />
               <button className="nav__btn">
                 <Search />
               </button>
-            </form>
+            </div>
             <div className="nav__box-cart">
               <div className="nav__bg-cart">
                 <Cart />

@@ -2,11 +2,17 @@
 
 .hero {
   padding: 90px 0 180px;
-  background-image: url("~@assets/images/heroDecore.png"),
-    url("~@assets/images/heroBg.png");
+  background-image: url("~@assets/images/strawberry.png"),
+    url("~@assets/images/garlic.png"), url("~@assets/images/heroBg.png"),
+    url("~@assets/images/leavesBottomRight.png"),
+    url("~@assets/images/leavesTopRight.png"),
+    url("~@assets/images/smallLeavesLeft.png"),
+    url("~@assets/images/smallLeavesRight.png"),
+    url("~@assets/images/leavesLeft.png");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top center;
+  background-position: top center, top left, top right, bottom right, top right,
+    top 30% left 8%, top right 6%, bottom left;
+  background-size: auto, auto, contain, auto, auto, auto, auto, auto, auto;
   background-color: $hero-bg-color;
 
   &__pre-title {
@@ -28,17 +34,16 @@
   }
 
   &__btn {
+    @include button;
     color: $primary-color;
     font-family: $secondary-font;
     font-size: 20px;
     font-weight: 700;
     line-height: normal;
-    border-radius: 16px;
     background: $yellow-color;
-    padding: 28px 40px;
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  }
+
+  &__arrow {
+    @include icon;
   }
 }
