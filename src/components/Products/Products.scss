@@ -1,0 +1,87 @@
+@import "@styles/index.scss";
+
+.products {
+  padding: 100px 0 100px 0;
+
+  &__pre-title {
+    color: $secondary-green-color;
+    text-align: center;
+    font-family: $yellowtail-font;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    color: $primary-color;
+    text-align: center;
+    font-family: $secondary-font;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__item {
+    width: 325px;
+    height: 480px;
+    border-radius: 30px;
+    background: #f9f8f8;
+    position: relative;
+    padding-top: 50px;
+    cursor: pointer;
+  }
+  &__image {
+    width: 335px;
+    height: 328px;
+    mix-blend-mode: multiply;
+  }
+
+  &__stars {
+    width: 21;
+    height: 25px;
+    fill: #ffa858;
+  }
+
+  &__box-category {
+    border-radius: 8px;
+    display: inline-block;
+    padding: 5px 12px 6px 12px;
+    background: #274c5b;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
+
+  &__category {
+    color: #fff;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__name {
+    color: #274c5b;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__content {
+    padding: 30px;
+  }
+}
