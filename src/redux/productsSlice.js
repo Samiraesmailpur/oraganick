@@ -27,7 +27,7 @@ const productsSlice = createSlice({
       .addCase(getProducts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.items = action.payload;
+        state.items = [...state.items, ...action.payload];
       })
       .addCase(getProductsById.pending, handlePending)
       .addCase(getProductsById.rejected, handleRejected)

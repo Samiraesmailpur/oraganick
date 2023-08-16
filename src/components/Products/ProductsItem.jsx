@@ -9,15 +9,21 @@ const ProductsItem = ({ category, name, image, price, discount }) => {
       <img className="products__image" src={image} alt={name} />
       <div className="products__content">
         <p className="products__name">{name}</p>
-        <p className="products__price">
-          ${price}.00
-          <span>${discount}.00</span>
-        </p>
-        <div>
-          <Stars className="products__stars" />
-          <Stars className="products__stars" />
-          <Stars className="products__stars" />
-          <Stars className="products__stars" />
+        <div className="products__price-box">
+          <p className="products__price">
+            {discount ? (
+              <span className="products__discount">${discount}.00</span>
+            ) : (
+              ""
+            )}
+            ${price}.00
+          </p>
+          <div>
+            <Stars className="products__stars" />
+            <Stars className="products__stars" />
+            <Stars className="products__stars" />
+            <Stars className="products__stars" />
+          </div>
         </div>
       </div>
     </li>

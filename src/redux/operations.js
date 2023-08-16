@@ -7,9 +7,10 @@ export const instance = axios.create({
 
 export const getProducts = createAsyncThunk(
   "products/getProducts",
-  async (_, thunkAPI) => {
+  async (page, thunkAPI) => {
     try {
-      const res = await instance.get("/api/products");
+      console.log(page);
+      const res = await instance.get(`/api/products/?page=${page}&limit=8`);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
