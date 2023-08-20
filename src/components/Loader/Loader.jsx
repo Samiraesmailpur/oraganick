@@ -1,18 +1,18 @@
-import "./Loader.scss";
-import { ThreeDots } from "react-loader-spinner";
+import { Rings } from "react-loader-spinner";
 
 const Loader = () => {
   return (
     <div className="loader">
-      <ThreeDots
+      <Rings
+        className="loader"
         height="80"
         width="80"
-        radius="9"
         color="#4fa94d"
-        ariaLabel="three-dots-loading"
+        radius="6"
         wrapperStyle={{}}
-        wrapperClassName=""
+        wrapperClass=""
         visible={true}
+        ariaLabel="rings-loading"
       />
     </div>
   );

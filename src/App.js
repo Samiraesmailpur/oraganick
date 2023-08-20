@@ -1,8 +1,16 @@
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import SharedLayout from "@components/SharedLayout/SharedLayout";
+import { useState } from "react";
+import MainLoader from "./components/MainLoader/MainLoader";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 2000);
+
   const Home = lazy(() => import("@pages/HomePage"));
   const NotFound = lazy(() => import("@pages/NotFoundPage"));
   const Cart = lazy(() => import("@pages/CartPage"));
@@ -12,7 +20,9 @@ function App() {
   const About = lazy(() => import("@pages/AboutPage"));
   const Blog = lazy(() => import("@pages/BlogPage"));
 
-  return (
+  return isLoading ? (
+    <MainLoader />
+  ) : (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} />

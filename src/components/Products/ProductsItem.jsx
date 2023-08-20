@@ -1,32 +1,73 @@
-import { ReactComponent as Stars } from "@assets/svg/starsTestimonial.svg";
+import { useState } from "react";
+import ProductDetails from "./ProductDetails";
+import Modal from "../Modal/Modal";
+import { starsRating } from "../../utils/starsRating";
 
-const ProductsItem = ({ category, name, image, price, discount }) => {
+const ProductsItem = ({
+  products: {
+    _id,
+    category,
+    name,
+    image,
+    price,
+    discount,
+    rating,
+    description,
+    productDescription,
+    additionalInfo,
+  },
+}) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const stars = starsRating(rating);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <li className="products__item">
-      <div className="products__box-category">
-        <span className="products__category">{category}</span>
-      </div>
-      <img className="products__image" src={image} alt={name} />
-      <div className="products__content">
-        <p className="products__name">{name}</p>
-        <div className="products__price-box">
-          <p className="products__price">
+    <>
+      <li onClick={openModal} className="products__item">
+        <div className="products__box-category">
+          <span className="products__category">{category}</span>
+        </div>
+        <img className="products__image" src={image} alt={name} />
+        <div className="products__content">
+          <p className="products__name">{name}</p>
+          <div className="products__price-box">
             {discount ? (
-              <span className="products__discount">${discount}.00</span>
+              <div>
+                <span className="products__old-price"> ${price}.00</span>
+                <span className="products__price">${discount}.00</span>
+              </div>
             ) : (
-              ""
+              <span className="products__price"> ${price}.00</span>
             )}
-            ${price}.00
-          </p>
-          <div>
-            <Stars className="products__stars" />
-            <Stars className="products__stars" />
-            <Stars className="products__stars" />
-            <Stars className="products__stars" />
+            <div>{stars}</div>
           </div>
         </div>
-      </div>
-    </li>
+      </li>
+      {isModalOpen && (
+        <Modal closeModal={closeModal}>
+          <ProductDetails
+            id={_id}
+            image={image}
+            name={name}
+            category={category}
+            price={price}
+            discount={discount}
+            rating={stars}
+            description={description}
+            productDescription={productDescription}
+            additionalInfo={additionalInfo}
+            closeModal={closeModal}
+          />
+        </Modal>
+      )}
+    </>
   );
 };
 

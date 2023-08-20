@@ -1,11 +1,7 @@
-import Container from "@components/Container/Container";
+import Cart from "../components/Cart/Cart";
 
 const CartPage = () => {
-  return (
-    <section>
-      <Container>cart</Container>
-    </section>
-  );
+  return <Cart />;
 };
 
 export default CartPage;

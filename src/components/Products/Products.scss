@@ -35,7 +35,7 @@
   &__item {
     width: 325px;
     border-radius: 30px;
-    background: #f9f8f8;
+    background: $light-bg-color;
     position: relative;
     padding-top: 50px;
     cursor: pointer;
@@ -56,27 +56,25 @@
     border-radius: 8px;
     display: inline-block;
     padding: 5px 12px 6px 12px;
-    background: #274c5b;
+    background: $primary-color;
     position: absolute;
     top: 5%;
     left: 5%;
   }
 
   &__category {
-    color: #fff;
+    color: $primary-white-color;
     text-align: center;
-    font-family: Open Sans;
+    font-family: $primary-font;
     font-size: 15px;
-    font-style: normal;
     font-weight: 600;
     line-height: normal;
   }
 
   &__name {
-    color: #274c5b;
-    font-family: Roboto;
+    color: $primary-color;
+    font-family: $secondary-font;
     font-size: 20px;
-    font-style: normal;
     font-weight: 600;
     line-height: normal;
     position: relative;
@@ -105,33 +103,25 @@
   }
 
   &__price {
-    color: #274c5b;
-    font-family: Open Sans;
+    color: $primary-color;
+    font-family: $primary-font;
     font-size: 18px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
 
-  &__discount {
-    color: #b8b8b8;
+  &__old-price {
+    color: $secondary-gray-color;
     text-align: center;
-    font-family: Open Sans;
+    font-family: $primary-font;
     font-size: 15px;
-    font-style: normal;
     font-weight: 600;
     line-height: normal;
     margin-right: 8px;
     position: relative;
 
     &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      border: 1px solid #b8b8b8;
-      top: 50%;
-      left: 0;
-      transform: translate(0, -50%);
+      @include line;
     }
   }
 
@@ -139,19 +129,28 @@
     @include button;
     background-color: #1e1e1e;
     margin: 0 auto;
-    color: #fff;
-    font-family: Roboto;
+    color: $primary-white-color;
+    font-family: $secondary-font;
     font-size: 20px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
 
   &__btn-blue {
-    background-color: #274c5b;
+    background-color: $primary-color;
   }
 
   &__arrow {
     @include icon;
+  }
+}
+
+.rating-stars {
+  width: 20px;
+  height: 20px;
+  fill: #ffa858;
+
+  &--none {
+    fill: #ccc;
   }
 }

@@ -2,15 +2,15 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const instance = axios.create({
-  baseURL: "https://organick-backend.onrender.com",
+  // baseURL: "https://organick-backend.onrender.com",
+  baseURL: "http://localhost:5050",
 });
 
 export const getProducts = createAsyncThunk(
   "products/getProducts",
   async (page, thunkAPI) => {
     try {
-      console.log(page);
-      const res = await instance.get(`/api/products/?page=${page}&limit=8`);
+      const res = await instance.get(`/api/products`);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -20,9 +20,9 @@ export const getProducts = createAsyncThunk(
 
 export const getProductsById = createAsyncThunk(
   "products/getProductById",
-  async ({ id }, thunkAPI) => {
+  async (id, thunkAPI) => {
     try {
-      const resp = await instance.get(`/api/products${id}`);
+      const resp = await instance.get(`/api/products/${id}`);
       return resp.data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.response.data.message);

@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectCartProducts } from "../../redux/cart/selectors";
 import "./Header.scss";
 import Container from "@components/Container/Container";
 import Logo from "../Logo/Logo";
@@ -7,6 +9,11 @@ import { ReactComponent as Search } from "@assets/svg/search.svg";
 import { ReactComponent as Arrow } from "@assets/svg/headerArrow.svg";
 
 const Header = () => {
+  const cartItems = useSelector(selectCartProducts);
+  const totalItemsInCart = cartItems.reduce((total, item) => {
+    return total + item.quantity;
+  }, 0);
+
   return (
     <header className="header">
       <Container>
@@ -52,12 +59,12 @@ const Header = () => {
                 <Search />
               </button>
             </div>
-            <div className="nav__box-cart">
+            <NavLink to="/cart" className="nav__box-cart">
               <div className="nav__bg-cart">
                 <Cart />
               </div>
-              <p className="nav__amount">Cart (0)</p>
-            </div>
+              <p className="nav__amount">Cart ({totalItemsInCart})</p>
+            </NavLink>
           </div>
         </nav>
       </Container>
