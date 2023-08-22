@@ -7,12 +7,16 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/products/operations";
-import { selectProducts } from "../../redux/products/selectors";
+import {
+  selectProducts,
+  selectIsLoadind,
+} from "../../redux/products/selectors";
 
 const Products = () => {
   const [page, setPage] = useState(1);
   const dispatch = useDispatch();
   const products = useSelector(selectProducts);
+  const isLoadind = useSelector(selectIsLoadind);
 
   useEffect(() => {
     dispatch(getProducts(page));
@@ -35,6 +39,7 @@ const Products = () => {
       <p className="products__pre-title">Categories</p>
       <h3 className="products__title">Our Products</h3>
       <Container>
+        {isLoadind && <Loader />}
         <ul className="products__list">
           {visibleProducts.map((item) => (
             <ProductsItem key={item._id} products={item} />

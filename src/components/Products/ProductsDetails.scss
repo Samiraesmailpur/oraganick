@@ -30,11 +30,13 @@
     background: #f9f8f8;
     border-radius: 30px;
     width: 591px;
+    height: auto;
   }
 
   &__image {
     mix-blend-mode: multiply;
     width: 100%;
+
     border-radius: 30px;
   }
 

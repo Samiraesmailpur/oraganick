@@ -5,6 +5,7 @@ import { addToCart } from "../../redux/cart/cartSlice";
 import { getProductsById } from "../../redux/products/operations";
 import { ReactComponent as Arrow } from "@assets/svg/arrow.svg";
 import { ReactComponent as Cross } from "@assets/svg/modal-cross.svg";
+import useProductQuantity from "../../hooks/useProductQuantity";
 
 const ProductDetails = ({
   id,
@@ -20,11 +21,9 @@ const ProductDetails = ({
   closeModal,
 }) => {
   const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState(1);
+  const { quantity, handleQuantityChange } = useProductQuantity(1);
   const [activeDescription, setActiveDescription] =
     useState("productDescription");
-
-  console.log(quantity);
 
   const handleDescriptionChange = (description) => {
     setActiveDescription(description);
@@ -43,12 +42,6 @@ const ProductDetails = ({
       quantity,
     };
     dispatch(addToCart(product));
-  };
-
-  const handleProductQuantity = (quantity) => {
-    if (!isNaN(quantity)) {
-      setQuantity(quantity);
-    }
   };
 
   useEffect(() => {
@@ -82,7 +75,7 @@ const ProductDetails = ({
             <input
               type="text"
               pattern="\d*"
-              onChange={(e) => handleProductQuantity(Number(e.target.value))}
+              onChange={(e) => handleQuantityChange(Number(e.target.value))}
               name="quantity"
               className="details__input"
               value={quantity}
