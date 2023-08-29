@@ -1,0 +1,3 @@
+[build]
+  publish = "organick/frontend/build"
+  base = "organick/frontend"
