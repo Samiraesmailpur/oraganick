@@ -1,0 +1,12 @@
+@import "@styles/index.scss";
+
+.about-hero {
+  &__bg {
+    @include title;
+    background-image: url("~@assets/images/aboutHero.png");
+    background-repeat: no-repeat;
+    height: 450px;
+    background-position: top center;
+    background-size: cover;
+  }
+}

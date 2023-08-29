@@ -1,0 +1,144 @@
+@import "@styles/index.scss";
+
+.about {
+  padding: 50px 0;
+  background-color: $light-bg-color;
+
+  &__content {
+    display: flex;
+  }
+
+  &__box-imgage {
+    max-width: 911px;
+  }
+  &__image {
+    width: 100%;
+    display: none;
+    @include desktop-large {
+      display: block;
+    }
+  }
+
+  &__box-content {
+    max-width: 690px;
+    @include desktop-small {
+      margin: 0 auto;
+    }
+  }
+
+  &__pre-title {
+    color: $secondary-green-color;
+    font-family: $yellowtail-font;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 5px;
+
+    @include tablet {
+      font-size: 50px;
+    }
+  }
+
+  &__desc {
+    color: $primary-gray-color;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 20px;
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__link {
+    @include button;
+    color: $primary-white-color;
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    background: $primary-color;
+  }
+
+  &__arrow {
+    @include icon;
+  }
+}
+
+.about-list {
+  margin-bottom: 45px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      margin-bottom: 35px;
+    }
+  }
+  &__bg {
+    display: none;
+
+    @include tablet {
+      display: block;
+      border-radius: 20px;
+      background: $primary-white-color;
+      width: 101px;
+      height: 101px;
+      margin-right: 20px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: #fff4cd;
+        top: 48%;
+        z-index: 0;
+        left: 10%;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+  }
+
+  &__title {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: normal;
+
+    @include tablet {
+      font-size: 25px;
+    }
+  }
+
+  &__desc {
+    color: $primary-gray-color;
+    font-family: $primary-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+}

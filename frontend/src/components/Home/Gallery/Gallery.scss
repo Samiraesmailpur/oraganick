@@ -1,0 +1,41 @@
+@import "@styles/index.scss";
+
+.gallery {
+  padding: 180px 0;
+  background: $gallery-bg-color;
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    @include desktop-small {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__block {
+    max-width: 580px;
+    position: relative;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__name {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 20px;
+    background: $primary-white-color;
+    max-width: 316px;
+    width: 100%;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,19 @@
+@import "@styles/index.scss";
+
+.recent-news {
+  &__bg {
+    @include title;
+    background-image: url("~@assets/images/newsBgLeft.png"),
+      url("~@assets/images/newsBgRight.png"),
+      linear-gradient(rgba(245, 245, 247, 1), rgba(245, 245, 247, 1));
+    background-repeat: no-repeat;
+    height: 450px;
+    background-position: top left, top right;
+    background-size: cover;
+    margin-bottom: 60px;
+
+    @include desktop-large {
+      background-size: contain;
+    }
+  }
+}

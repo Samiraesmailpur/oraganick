@@ -1,0 +1,65 @@
+@import "@styles/index.scss";
+
+.backdrop {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(244, 244, 244, 0.82);
+  z-index: 2;
+  pointer-events: all;
+}
+.modal {
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background-color: #fffafa;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  z-index: 1;
+  max-width: 1400px;
+
+  @include tablet {
+    padding: 50px;
+    height: unset;
+    min-height: 600px;
+  }
+
+  @include desktop-large {
+    padding: 90px;
+  }
+
+  &__cross {
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    background: $primary-color;
+    width: 64px;
+    height: 46px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    z-index: 3;
+
+    @include tablet {
+      top: 12px;
+      right: 12px;
+    }
+
+    @include desktop-large {
+      top: 45px;
+      right: 32px;
+    }
+
+    svg {
+      width: 13px;
+      height: 15px;
+      fill: $primary-white-color;
+    }
+  }
+}

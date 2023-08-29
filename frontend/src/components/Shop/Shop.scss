@@ -1,0 +1,13 @@
+@import "@styles/index.scss";
+
+.shop {
+  &__bg {
+    @include title;
+    background-image: url("~@assets/images/bg.png");
+    background-repeat: no-repeat;
+    height: 450px;
+    background-position: top center;
+    background-size: cover;
+    margin-bottom: 90px;
+  }
+}

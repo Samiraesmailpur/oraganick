@@ -1,0 +1,210 @@
+@import "@styles/index.scss";
+
+.cart {
+  &__bg {
+    @include title;
+    background-image: url("~@assets/images/bg.png");
+    background-repeat: no-repeat;
+    height: 450px;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 50px;
+
+    @include tablet {
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("~@assets/images/strawberry.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 117px;
+        top: 20%;
+        right: 25%;
+        transform: rotate(70deg);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url("~@assets/images/garlic.png");
+        background-repeat: no-repeat;
+        top: 20%;
+        left: 30%;
+        background-size: contain;
+        width: 124px;
+        height: 114px;
+      }
+    }
+  }
+
+  &__box {
+    background-color: $yellow-bg-color;
+    padding: 80px 0;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  &__item {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      gap: 20px;
+    }
+
+    @include desktop-large {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+  }
+
+  &__product-box {
+    display: flex;
+    align-items: center;
+
+    @include mobile-small {
+      flex-direction: column;
+    }
+  }
+
+  &__box-img {
+    border-radius: 30px;
+    background: rgba(249, 248, 248, 1);
+    width: 250px;
+    height: 200px;
+
+    @include mobile-small {
+      margin-bottom: 20px;
+    }
+
+    @include tablet {
+      margin-right: 20px;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    object-fit: contain;
+  }
+
+  &__name {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    @include mobile-small {
+      margin-bottom: 20px;
+    }
+
+    @include tablet {
+      margin-right: 10px;
+    }
+  }
+
+  &__price-old {
+    color: $secondary-gray-color;
+    font-family: $secondary-font;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    margin-right: 10px;
+
+    &::before {
+      @include line;
+    }
+  }
+
+  &__price {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__quantity-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    @include tablet {
+      justify-content: flex-end;
+    }
+  }
+
+  &__quantity {
+    color: $primary-color;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 20px;
+  }
+
+  &__input {
+    @include input-quantity;
+  }
+
+  &__cross {
+    @include button;
+    padding: 20px 25px;
+    background-color: $primary-color;
+
+    svg {
+      width: 13px;
+      height: 15px;
+      fill: $primary-white-color;
+    }
+  }
+
+  &__cost-box {
+    text-align: right;
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 90px;
+  }
+  &__cost {
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    @include button;
+    background-color: $primary-color;
+    color: $primary-white-color;
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 auto;
+  }
+
+  &__arrow {
+    @include icon;
+  }
+
+  &__empty {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+  }
+}

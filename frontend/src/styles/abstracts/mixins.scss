@@ -1,0 +1,92 @@
+@mixin mobile-small {
+  @media screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop-small {
+  @media screen and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin icon {
+  width: 19px;
+  height: 19px;
+  background: #335b6b;
+  border-radius: 50%;
+}
+
+@mixin button {
+  max-width: 200px;
+  padding: 18px 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 16px;
+
+  @include tablet {
+    padding: 20px 35px;
+    max-width: 220px;
+  }
+  @include desktop-large() {
+    padding: 28px 35px;
+  }
+}
+
+@mixin line {
+  content: "";
+  position: absolute;
+  border: 1px solid $secondary-gray-color;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+@mixin input-quantity {
+  color: $primary-color;
+  font-family: $secondary-font;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 16px;
+  border: 2px solid $primary-color;
+  background: $primary-white-color;
+  max-width: 70px;
+  height: 50px;
+  padding: 10px 25px;
+  outline: none;
+
+  @include tablet {
+    font-size: 20px;
+    max-width: 120px;
+    height: 80px;
+    padding: 10px 45px;
+  }
+}
+
+@mixin title {
+  color: $primary-color;
+  font-family: $secondary-font;
+  font-size: 70px;
+  font-weight: 800;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

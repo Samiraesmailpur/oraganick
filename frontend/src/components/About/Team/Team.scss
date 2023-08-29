@@ -1,0 +1,77 @@
+@import "@styles/index.scss";
+
+.team {
+  padding: 90px 0;
+
+  &__pre-title {
+    color: $secondary-green-color;
+    text-align: center;
+    font-family: $yellowtail-font;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    color: $primary-color;
+    text-align: center;
+    font-family: $secondary-font;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    color: $primary-gray-color;
+    text-align: center;
+    font-family: $primary-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 165.4%;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 400px;
+    height: 485px;
+    margin-bottom: 60px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__content {
+    background-color: $light-bg-color;
+    border-radius: 0 0 30px 30px;
+    padding: 20px 15px;
+  }
+
+  &__name {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+
+  &__profession {
+    color: $secondary-green-color;
+    font-family: $yellowtail-font;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

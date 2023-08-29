@@ -1,0 +1,155 @@
+@import "@styles/index.scss";
+
+.advantages {
+  padding: 90px 0;
+  background-color: $light-bg-color;
+
+  &__flex-container {
+    margin-bottom: 70px;
+
+    @include desktop-large {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+  }
+
+  &__content-box {
+    @include desktop-large {
+      width: 50%;
+    }
+  }
+
+  &__pre-title {
+    color: $secondary-green-color;
+    font-family: $yellowtail-font;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 25px;
+
+    @include tablet {
+      font-size: 50px;
+    }
+  }
+
+  &__desc {
+    color: $primary-gray-color;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 30px;
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__heading {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 29px 91px 29px 27px;
+    border-radius: 49px;
+    background: #ececec;
+    max-width: 339px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $primary-gray-color;
+    font-family: $primary-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  &__image-box {
+    display: none;
+
+    @include desktop-large {
+      display: block;
+      width: 50%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 30px;
+    background: #ebebeb;
+  }
+}
+
+.advantages-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  &__item {
+    max-width: 257px;
+    height: 335px;
+    padding: 25px 35px;
+    border-radius: 30px;
+    background: $primary-white-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  &__image-box {
+    width: 95px;
+    height: 95px;
+    border-radius: 18px;
+    background: $light-bg-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 42px;
+    height: 42px;
+  }
+
+  &__title {
+    color: $primary-color;
+    text-align: center;
+    font-family: $secondary-font;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: normal;
+  }
+
+  &__desc {
+    color: $primary-gray-color;
+    text-align: center;
+    font-family: $primary-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+}

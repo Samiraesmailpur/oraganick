@@ -1,0 +1,110 @@
+@import "@styles/index.scss";
+
+.eco-friendly {
+  &__container {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__box {
+    display: flex;
+    position: relative;
+  }
+  &__box-image {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+      width: 100%;
+    }
+
+    @include desktop-large {
+      max-width: 952px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__content {
+    border-radius: 30px;
+    max-width: 650px;
+    height: max-content;
+    background-color: $primary-white-color;
+    padding: 30px;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+    }
+
+    @include desktop-large {
+      left: 40%;
+      top: 10%;
+      transform: translate(0, 0);
+      border-radius: 30px;
+      max-width: 690px;
+      height: 720px;
+      background-color: $primary-white-color;
+      padding: 80px 20px 80px 80px;
+    }
+  }
+
+  &__pre-title {
+    color: $secondary-green-color;
+    font-family: $yellowtail-font;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 35px;
+
+    @include tablet {
+      font-size: 50px;
+    }
+  }
+
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__headline {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 5px;
+
+    @include tablet {
+      font-size: 25px;
+    }
+  }
+
+  &__desc {
+    color: $primary-gray-color;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+}

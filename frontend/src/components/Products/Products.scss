@@ -1,0 +1,388 @@
+@import "@styles/index.scss";
+
+.products {
+  padding: 100px 0;
+
+  &__pre-title {
+    color: $secondary-green-color;
+    text-align: center;
+    font-family: $yellowtail-font;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    color: $primary-color;
+    text-align: center;
+    font-family: $secondary-font;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 40px;
+
+    @include tablet {
+      font-size: 50px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 100px;
+  }
+
+  &__item {
+    width: 325px;
+    border-radius: 30px;
+    background: $light-bg-color;
+    position: relative;
+    padding-top: 50px;
+    cursor: pointer;
+  }
+  &__image {
+    width: 335px;
+    height: 328px;
+    mix-blend-mode: multiply;
+  }
+
+  &__stars {
+    width: 21;
+    height: 25px;
+    fill: #ffa858;
+  }
+
+  &__box-category {
+    border-radius: 8px;
+    display: inline-block;
+    padding: 5px 12px 6px 12px;
+    background: $primary-color;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
+
+  &__category {
+    color: $primary-white-color;
+    text-align: center;
+    font-family: $primary-font;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__name {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    margin-bottom: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      border: 1px solid #dedddd;
+      width: 100%;
+      height: 1px;
+      bottom: -50%;
+    }
+  }
+
+  &__content {
+    padding: 30px;
+  }
+
+  &__price-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price {
+    color: $primary-color;
+    font-family: $primary-font;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__old-price {
+    color: $secondary-gray-color;
+    text-align: center;
+    font-family: $primary-font;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: normal;
+    margin-right: 8px;
+    position: relative;
+
+    &::before {
+      @include line;
+    }
+  }
+
+  &__btn {
+    @include button;
+    background-color: #1e1e1e;
+    margin: 0 auto;
+    color: $primary-white-color;
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__btn-blue {
+    background-color: $primary-color;
+  }
+
+  &__arrow {
+    @include icon;
+  }
+}
+
+.rating-stars {
+  width: 20px;
+  height: 20px;
+  fill: #ffa858;
+
+  &--none {
+    fill: #ccc;
+  }
+}
+
+.details {
+  position: relative;
+  overflow: scroll;
+  height: 100%;
+
+  &__flex-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 70px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__image-box {
+    position: relative;
+    background: $light-bg-color;
+    border-radius: 30px;
+    height: 400px;
+
+    @include tablet {
+      width: 50%;
+    }
+  }
+
+  &__image {
+    mix-blend-mode: multiply;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
+
+  &__category {
+    color: $primary-white-color;
+    text-align: center;
+    font-family: $primary-font;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 8px;
+    background: $primary-color;
+    padding: 5px 12px 6px 12px;
+    display: inline-block;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
+
+  &__content-box {
+    @include tablet {
+      width: 50%;
+    }
+  }
+
+  &__name {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 5px;
+
+    @include tablet {
+      font-size: 40px;
+    }
+  }
+
+  &__price-box {
+    margin-bottom: 30px;
+  }
+
+  &__price {
+    color: $primary-color;
+    font-family: $primary-font;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 30px;
+
+    @include tablet {
+      font-size: 25px;
+    }
+  }
+
+  &__old-price {
+    color: $secondary-gray-color;
+    text-align: center;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin-right: 5px;
+    position: relative;
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+    &::before {
+      @include line;
+    }
+  }
+
+  &__desc {
+    color: $primary-gray-color;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 35px;
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__quantity {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+
+  &__input {
+    @include input-quantity;
+  }
+
+  &__btn {
+    @include button;
+    background-color: $primary-color;
+    color: $primary-white-color;
+    font-family: $secondary-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    gap: 5px;
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+    &--yellow {
+      background: #efd372;
+    }
+  }
+
+  &__arrow {
+    @include icon;
+  }
+
+  &__quantity-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__desc-btn {
+    display: none;
+    color: $primary-color;
+    background: #eff6f1;
+    text-align: center;
+    font-family: $primary-font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+
+    @include tablet {
+      display: block;
+      font-size: 25px;
+      padding: 20px 40px;
+    }
+
+    @include desktop-large {
+      padding: 23px 57px;
+    }
+  }
+
+  &__desc-btn-active {
+    color: $primary-white-color;
+    background: $primary-color;
+  }
+
+  &__info-text {
+    display: none;
+    color: $primary-gray-color;
+    text-align: center;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    @include tablet {
+      display: block;
+      font-size: 18px;
+    }
+  }
+
+  &__desc-btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+}

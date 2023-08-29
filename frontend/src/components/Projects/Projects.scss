@@ -1,0 +1,49 @@
+@import "@styles/index.scss";
+
+.projects {
+  &__bg {
+    @include title;
+    background-image: url("~@assets/images/serviceBg.png");
+    background-repeat: no-repeat;
+    height: 450px;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 90px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    max-width: 370px;
+    height: 430px;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 30px;
+  }
+
+  &__title {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: normal;
+  }
+
+  &__category {
+    color: $secondary-green-color;
+    font-family: $yellowtail-font;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

@@ -1,0 +1,51 @@
+@import "@styles/index.scss";
+
+.news {
+  padding: 100px 0;
+
+  &__content-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__pre-title {
+    color: $secondary-green-color;
+    font-family: $yellowtail-font;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: normal;
+    max-width: 702px;
+    margin-bottom: 45px;
+
+    @include tablet {
+      font-size: 50px;
+    }
+  }
+
+  &__btn {
+    @include button;
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    border: 2px solid $primary-color;
+    background: $primary-white-color;
+    margin-bottom: 45px;
+  }
+
+  &__arrow {
+    @include icon;
+  }
+}

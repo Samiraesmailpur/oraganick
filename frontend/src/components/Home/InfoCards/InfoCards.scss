@@ -1,0 +1,66 @@
+@import "@styles/index.scss";
+
+.info {
+  padding: 100px 0 150px;
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    @include desktop-large {
+      flex-wrap: nowrap;
+    }
+  }
+  &__box-img {
+    max-width: 682px;
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 30px;
+  }
+
+  &__box-content {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+  }
+
+  &__text {
+    color: $primary-white-color;
+    font-family: $yellowtail-font;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include tablet {
+      font-size: 36px;
+    }
+
+    &_color_green {
+      color: $secondary-green-color;
+    }
+  }
+
+  &__desc {
+    color: $primary-white-color;
+    font-family: $secondary-font;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: normal;
+    max-width: 277px;
+
+    @include tablet {
+      font-size: 40px;
+    }
+
+    &_color_blue {
+      color: $primary-color;
+    }
+  }
+}

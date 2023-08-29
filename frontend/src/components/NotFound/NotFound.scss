@@ -1,0 +1,105 @@
+@import "@styles/index.scss";
+
+.not-found {
+  background-color: $not-found-color;
+  padding: 70px 0;
+
+  &__box {
+    @include desktop-large {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 90px;
+    }
+  }
+
+  &__flowers-image {
+    display: none;
+
+    @include desktop-large {
+      display: block;
+    }
+  }
+
+  &__image {
+    width: 300px;
+
+    @include tablet {
+      width: 503px;
+    }
+  }
+
+  &__title {
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 10px;
+
+    @include tablet {
+      font-size: 70px;
+    }
+  }
+  &__desc {
+    color: $primary-gray-color;
+    font-family: $primary-font;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    max-width: 250px;
+    padding: 28px 35px;
+    border: none;
+    border-radius: 16px;
+    border-radius: 16px;
+    background: $primary-color;
+  }
+  &__link {
+    color: $primary-white-color;
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__arrow {
+    @include icon;
+  }
+
+  &__box-image {
+    position: relative;
+  }
+
+  &__icon {
+    display: none;
+
+    @include desktop-large {
+      display: block;
+      position: absolute;
+
+      &:nth-child(1) {
+        bottom: 0;
+        left: 0;
+      }
+      &:nth-child(2) {
+        top: 0;
+        left: 42%;
+      }
+      &:nth-child(3) {
+        top: 30%;
+        right: 0;
+      }
+      &:nth-child(4) {
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
