@@ -32,7 +32,7 @@ const Offer = () => {
         {isLoading ? (
           <Loader />
         ) : (
-          <ul className="products__list">
+          <ul className="products-list">
             {products.map((item) => (
               <ProductsItem key={item._id} products={item} />
             ))}

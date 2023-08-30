@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import NavigationItems from "../NavigationItems/NavigationItems";
-import "./BurgerMenu.scss";
+import HeaderNavigationItems from "./NavigationItems";
 import { ReactComponent as Cross } from "@assets/svg/modal-cross.svg";
 
 const BurgerMenu = () => {
@@ -41,7 +40,7 @@ const BurgerMenu = () => {
       >
         <div className="menu__content">
           <Cross className="menu__cross-icon" onClick={toggleMenu} />
-          <NavigationItems />
+          <HeaderNavigationItems />
         </div>
       </div>
     </div>

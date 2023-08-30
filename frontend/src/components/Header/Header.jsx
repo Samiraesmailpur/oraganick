@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectCartProducts } from "@redux/cart/selectors";
-import "./Header.scss";
 import Container from "@components/Container/Container";
-import NavigationItems from "./NavigationItems/NavigationItems";
-import BurgerMenu from "./BurgerMenu/BurgerMenu";
+import NavigationItems from "./NavigationItems";
+import BurgerMenu from "./BurgerMenu";
 import Logo from "../Logo/Logo";
 import { ReactComponent as Cart } from "@assets/svg/cart.svg";
 import { ReactComponent as Search } from "@assets/svg/search.svg";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import "./Header.scss";
 
 const Header = () => {
   const cartItems = useSelector(selectCartProducts);

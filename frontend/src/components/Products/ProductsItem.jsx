@@ -36,21 +36,21 @@ const ProductsItem = ({
 
   return (
     <>
-      <li onClick={openModal} className="products__item">
-        <div className="products__box-category">
-          <span className="products__category">{category}</span>
+      <li onClick={openModal} className="products-list__item">
+        <div className="products-list__box-category">
+          <span className="products-list__category">{category}</span>
         </div>
-        <img className="products__image" src={image} alt={name} />
-        <div className="products__content">
-          <p className="products__name">{name}</p>
-          <div className="products__price-box">
+        <img className="products-list__image" src={image} alt={name} />
+        <div className="products-list__content">
+          <p className="products-list__name">{name}</p>
+          <div className="products-list__price-box">
             {discount ? (
               <div>
-                <span className="products__old-price"> ${price}.00</span>
-                <span className="products__price">${discount}.00</span>
+                <span className="products-list__old-price"> ${price}.00</span>
+                <span className="products-list__price">${discount}.00</span>
               </div>
             ) : (
-              <span className="products__price"> ${price}.00</span>
+              <span className="products-list__price"> ${price}.00</span>
             )}
             <div>{stars}</div>
           </div>

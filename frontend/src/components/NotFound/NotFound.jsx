@@ -7,6 +7,7 @@ import Container from "@components/Container/Container";
 import flowers from "@assets/images/flowers.png";
 import notFound from "@assets/images/notFound.png";
 import "./NotFound.scss";
+import { NavLink } from "react-router-dom";
 
 const NotFound = () => {
   return (
@@ -30,12 +31,10 @@ const NotFound = () => {
             <p className="not-found__desc">
               The page you are looking for doesn't exist or has been moved
             </p>
-            <div className="not-found__wrapper">
-              <a href="/" className="not-found__link">
-                Go to Homepage
-                <Arrow className="not-found__arrow" />
-              </a>
-            </div>
+            <NavLink to='/' className="not-found__link">
+              <span className="not-found__text">Go to Homepage</span>
+              <Arrow className="not-found__arrow" />
+            </NavLink>
           </div>
         </div>
       </Container>

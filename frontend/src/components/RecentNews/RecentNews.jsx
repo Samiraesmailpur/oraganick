@@ -1,4 +1,4 @@
-import "./News.scss";
+import "./RecentNews.scss";
 import Container from "@components/Container/Container";
 import Post from "@components/Post/Post";
 import tomatoes from "@assets/images/tomatoes.png";
@@ -8,7 +8,7 @@ import woman from "@assets/images/woman.png";
 import vitamins from "@assets/images/vitamins.png";
 import trash from "@assets/images/trash.png";
 
-const News = () => {
+const RecentNews = () => {
   const postsData = [
     {
       id: 1,
@@ -62,4 +62,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default RecentNews;

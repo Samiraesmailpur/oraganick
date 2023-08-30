@@ -15,7 +15,6 @@ const ProductDetails = ({
   description,
   productDescription,
   additionalInfo,
-  closeModal,
 }) => {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
@@ -23,8 +22,8 @@ const ProductDetails = ({
     useState("productDescription");
   const [isActive, setIsActive] = useState(false);
 
-  const toggleColor = () => {
-    setIsActive(!isActive);
+  const addActiveColor = () => {
+    setIsActive(true);
   };
 
   const handleDescriptionChange = (description) => {
@@ -88,10 +87,12 @@ const ProductDetails = ({
             <button
               onClick={() => {
                 handleAddToCart();
-                toggleColor();
+                addActiveColor();
               }}
               className={
-                isActive ? "details__btn details__btn--yellow" : "details__btn"
+                (isActive
+                  ? "details__btn details__btn--yellow"
+                  : "details__btn") + (quantity < 1 ? " disabled" : "")
               }
             >
               Add To Cart

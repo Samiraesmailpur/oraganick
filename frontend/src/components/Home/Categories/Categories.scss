@@ -1,0 +1,48 @@
+@import "@styles/index.scss";
+
+.categories {
+  padding: 100px 0;
+
+  &__pre-title {
+    color: $secondary-green-color;
+    text-align: center;
+    font-family: $yellowtail-font;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    color: $primary-color;
+    text-align: center;
+    font-family: $secondary-font;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 40px;
+
+    @include tablet {
+      font-size: 50px;
+    }
+  }
+
+  &__btn {
+    @include button;
+    background-color: #1e1e1e;
+    margin: 0 auto;
+    color: $primary-white-color;
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__btn--blue {
+    background-color: $primary-color;
+  }
+
+  &__arrow {
+    @include icon;
+  }
+}

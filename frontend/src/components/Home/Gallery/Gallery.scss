@@ -1,8 +1,12 @@
 @import "@styles/index.scss";
 
 .gallery {
-  padding: 180px 0;
+  padding: 90px 0;
   background: $gallery-bg-color;
+
+  @include tablet {
+    padding: 180px 0;
+  }
 
   &__box {
     display: flex;

@@ -1,13 +1,13 @@
+import RecentNews from "@components/RecentNews/RecentNews";
 import Subscribe from "@components/Subscribe/Subscribe";
-import News from "@components/News/News";
 
-const BlogPage = () => {
+const NewsPage = () => {
   return (
     <>
-      <News />
+      <RecentNews />
       <Subscribe />
     </>
   );
 };
 
-export default BlogPage;
+export default NewsPage;
