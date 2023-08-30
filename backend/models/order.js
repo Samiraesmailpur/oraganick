@@ -11,11 +11,16 @@ const schema = Joi.object({
   email: Joi.string().pattern(emailRegex).required(),
   address: Joi.string().required(),
   number: Joi.string().pattern(numberRegex).required(),
+  message: Joi.string().allow("").optional(),
   products: Joi.array()
     .items(
       Joi.object({
-        _id: Joi.string().required(),
+        id: Joi.string().required(),
         quantity: Joi.number().required(),
+        image: Joi.string(),
+        name: Joi.string(),
+        price: Joi.number(),
+        discount: Joi.number(),
       })
     )
     .required(),
