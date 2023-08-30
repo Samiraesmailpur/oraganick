@@ -10,6 +10,7 @@ function App() {
   const Shop = lazy(() => import("@pages/ShopPage"));
   const About = lazy(() => import("@pages/AboutPage"));
   const News = lazy(() => import("@pages/NewsPage"));
+  const AdminPanel = lazy(() => import("@pages/AdminPanelPage"));
 
   return (
     <Routes>
@@ -21,6 +22,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/news" element={<News />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/admin" element={<AdminPanel />} />
       </Route>
     </Routes>
   );
