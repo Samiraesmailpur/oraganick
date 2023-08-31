@@ -4,12 +4,12 @@ https://organick-shop.netlify.app/
 
 Organick is a project that combines a front-end application built with React and a back-end application built with Node.js and Express. The front-end allows users to interact with organic products, while the back-end manages the data and provides API endpoints.
 
-What realized:
+What has been implemented:
 
 - adaptive and cross-browser design
 - the following pages are implemented: Home, About, Shop, News, Projects, Admin (by the following route: /admin).
 - product display with pagination
-- modal window for product display
+- mmodal window for product item display
 - shopping cart
 - order form
 - slider for user reviews
@@ -65,7 +65,7 @@ https://github.com/Samiraesmailpur/oraganick.git
 
 3. Install dependencies: npm install
 
-4. Running the Application
+4. Run the application
 
 For development (with nodemon):
 
@@ -88,6 +88,6 @@ https://github.com/Samiraesmailpur/oraganick.git
 
 3. Install dependencies: npm install
 
-4. Running the Application: npm start
+4. Run the application: npm start
 
 The backend server will start and be accessible at http://localhost:3000.
