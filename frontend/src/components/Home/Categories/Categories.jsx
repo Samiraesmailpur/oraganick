@@ -24,8 +24,11 @@ const Categories = () => {
     dispatch(getProducts(page));
   }, [dispatch, page]);
 
+  // clear store before component unmount
   useEffect(() => {
-    dispatch(clearItems());
+    return () => {
+      dispatch(clearItems());
+    };
   }, [dispatch]);
 
   const incrementPage = () => {
